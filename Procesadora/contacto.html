@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto - Procesadora Dios es Amor</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fafafa;
+      color: #333;
+    }
+
+    /* ======== MENÚ PRINCIPAL ======== */
+    nav.menu-principal {
+      display: flex;
+      justify-content: center;
+      background-color: #2c3e50;
+      padding: 12px 0;
+      flex-wrap: wrap;
+    }
+
+    nav.menu-principal a {
+      color: #f5e9e9;
+      text-decoration: none;
+      margin: 0 25px;
+      font-weight: bold;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+
+    nav.menu-principal a:hover {
+      color: #ffd700;
+      text-decoration: underline;
+    }
+
+    /* ======== CONTENEDOR PRINCIPAL ======== */
+    main {
+      max-width: 700px;
+      margin: 30px auto;
+      background: white;
+      padding: 20px 25px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #ccc;
+    }
+
+    h1 {
+      margin-top: 0;
+      text-align: center;
+    }
+
+    /* ======== LOGO ======== */
+    .logo-contacto {
+      display: flex;
+      justify-content: center;
+      margin: 15px 0;
+    }
+
+    .logo-contacto img {
+      max-width: 180px;
+      width: 100%;
+      height: auto;
+    }
+
+    /* ======== INFO CONTACTO ======== */
+    .info-contacto {
+      margin-bottom: 30px;
+      padding: 15px;
+      background-color: #eef7ff;
+      border-left: 5px solid #007bff;
+      border-radius: 5px;
+    }
+
+    .info-contacto h3 {
+      margin-top: 0;
+      color: #007bff;
+    }
+
+    .info-contacto p {
+      margin: 5px 0;
+      line-height: 1.6;
+    }
+
+    /* ======== FORMULARIO ======== */
+    form.formulario {
+      display: flex;
+      flex-direction: column;
+    }
+
+    form label {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    form input[type="text"],
+    form input[type="tel"],
+    form textarea {
+      margin-top: 5px;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+
+    form button {
+      margin-top: 20px;
+      padding: 12px;
+      font-size: 18px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    form button:hover {
+      background-color: #0056b3;
+    }
+
+    #mensajeConfirmacion {
+      display: none;
+      margin-top: 20px;
+      padding: 12px;
+      background-color: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+      border-radius: 5px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    /* ======== MEDIA QUERIES (RESPONSIVO) ======== */
+    @media (max-width: 600px) {
+      nav.menu-principal {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav.menu-principal a {
+        margin: 8px 0;
+        font-size: 16px;
+      }
+
+      main {
+        margin: 15px;
+        padding: 15px;
+      }
+
+      h1 {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ======== MENÚ ======== -->
+  <nav class="menu-principal">
+    <a href="index.html">Inicio</a>
+    <a href="quienes-somos.html">Quiénes somos</a>
+    <a href="productos.html">Productos</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="sugerencias.html">Sugerencias</a>
+  </nav>
+
+  <!-- ======== CONTENIDO PRINCIPAL ======== -->
+  <main>
+    <h1>Contacto</h1>
+
+    <div class="logo-contacto">
+      <img src="img/logo.jpeg" alt="Logo de la empresa" />
+    </div>
+
+    <div class="info-contacto">
+      <h3>Contáctanos para adquirir nuestros productos:</h3>
+      <p><strong>En Honduras:</strong></p>
+      <p>Nombre: Wilfredo Irías</p>
+      <p>Teléfono: 9879-1335</p>
+      <p>Correo electrónico: <a href="mailto:iriaswil@gmail.com">iriaswil@gmail.com</a></p>
+      <p>Ubicación: Tegucigalpa, Honduras</p>
+
+      <br>
+
+      <p><strong>En Estados Unidos:</strong></p>
+      <p>Nombre: Roberto Alvarado</p>
+      <p>Teléfono: 9879-1335</p>
+      <p>Correo electrónico: <a href="mailto:ralvarado@gmail.com">ralvarado@gmail.com</a></p>
+      <p>Ubicación: Tampa, Florida</p>
+    </div>
+
+    <p>
+      En caso de no contactarnos, puedes dejarnos tu mensaje llenando la información del formulario descrito abajo,
+      a la brevedad estaremos contactándote.
+    </p>
+    <p>
+      Asegúrate de dejar tu número de teléfono, te estaremos intentando contactar a la brevedad.
+    </p>
+
+    <!-- ======== FORMULARIO ======== -->
+    <form id="formContacto" class="formulario" method="POST" action="https://formspree.io/f/mwpqneye">
+      <label for="nombre">Nombre completo:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="telefono">Número de teléfono:</label>
+      <input type="tel" id="telefono" name="telefono" required>
+
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+      <button type="submit">Enviar mensaje</button>
+    </form>
+
+    <div id="mensajeConfirmacion">¡Mensaje enviado! Muchas gracias por contactarnos.</div>
+  </main>
+
+  <!-- ======== SCRIPT FORMULARIO ======== -->
+  <script>
+    const form = document.getElementById('formContacto');
+    const mensajeConfirmacion = document.getElementById('mensajeConfirmacion');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          mensajeConfirmacion.style.display = 'block';
+          form.reset();
+          setTimeout(() => {
+            mensajeConfirmacion.style.display = 'none';
+          }, 5000);
+        } else {
+          alert('Error al enviar la sugerencia, por favor intente de nuevo.');
+        }
+      } catch (error) {
+        alert('Error al enviar la sugerencia, por favor intente de nuevo.');
+      }
+    });
+  </script>
+
+</body>
+
+</html>
