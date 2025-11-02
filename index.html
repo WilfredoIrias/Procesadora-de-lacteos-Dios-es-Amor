@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Procesadora de Lácteos Dios es Amor</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* ======== ENCABEZADO ======== */
+    .top-header {
+      background-image: url('img/portada2.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: white;
+      padding-bottom: 80px;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 35px;
+      background-color: rgba(0, 0, 0, 0.5);
+      flex-wrap: wrap;
+      text-align: center;
+    }
+
+    .header img {
+      width: 100px;
+      height: 120px;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+
+    .header h1 {
+      font-size: 70px;
+      margin: 0;
+    }
+
+    /* ======== MENÚ PRINCIPAL ======== */
+    nav.menu-principal {
+      display: flex;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 10px 0;
+      font-size: 18px;
+      flex-wrap: wrap;
+    }
+
+    nav.menu-principal a {
+      color: rgb(245, 233, 233);
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav.menu-principal a:hover {
+      text-decoration: underline;
+      color: #f8d210;
+    }
+
+    /* ======== ESTILOS GENERALES ======== */
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f3f7f3;
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+
+    main,
+    section.container,
+    footer {
+      background-color: #f2f7f2;
+    }
+
+    /* ======== IMÁGENES PRODUCTOS ======== */
+    .product-img {
+      width: 100%;
+      max-width: 580px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .product-img:hover {
+      transform: scale(1.05);
+    }
+
+    /* ======== VIDEOS ======== */
+    .video-wrapper video.video-frame {
+      width: 100%;
+      max-width: 250px;
+      height: auto;
+      margin: 0 auto;
+      display: block;
+      border-radius: 8px;
+    }
+
+    .video-container .col-md-4 {
+      display: flex;
+      justify-content: center;
+    }
+
+    /* ======== DESCRIPCIÓN EMPRESA ======== */
+    .descripcion-empresa {
+      width: 100%;
+      padding: 30px 20px;
+      background-color: #e7f0e7;
+      color: #222;
+      font-weight: 500;
+      font-size: 18px;
+      text-align: justify;
+      box-sizing: border-box;
+      border-radius: 0 0 10px 10px;
+      margin-bottom: 40px;
+    }
+
+    /* ======== MEDIA QUERIES ======== */
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+      }
+
+      .header img {
+        margin: 0 0 15px 0;
+        width: 80px;
+        height: 90px;
+      }
+
+      .header h1 {
+        font-size: 32px;
+        line-height: 1.2;
+      }
+
+      nav.menu-principal a {
+        margin: 5px 10px;
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .header h1 {
+        font-size: 26px;
+      }
+
+      nav.menu-principal {
+        flex-direction: column;
+        padding: 10px;
+      }
+
+      nav.menu-principal a {
+        margin: 8px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ======== HEADER ======== -->
+  <div class="top-header">
+    <div class="header">
+      <img src="img/logo.JPEG" alt="Logo" />
+      <h1>Procesadora de Lácteos Dios es Amor</h1>
+    </div>
+
+    <nav class="menu-principal">
+      <a href="index.html">Inicio</a>
+      <a href="quienes-somos.html">Quiénes somos</a>
+      <a href="productos.html">Productos</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="sugerencias.html">Sugerencias</a>
+    </nav>
+  </div>
+
+  <!-- ======== PRODUCTOS ======== -->
+  <main class="container my-5">
+    <div class="text-center mb-4">
+      <h2>PRODUCTOS DE CALIDAD</h2>
+      <p>100% pureza</p>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-md-4 mb-3 d-flex justify-content-center">
+        <img src="img/pilaleche.jpg" class="product-img" alt="Pila de leche" />
+      </div>
+      <div class="col-md-4 mb-3 d-flex justify-content-center">
+        <img src="img/leche1.jpg" class="product-img" alt="Leche fresca" />
+      </div>
+      <div class="col-md-4 mb-3 d-flex justify-content-center">
+        <img src="img/pilaleche.jpg" class="product-img" alt="Leche fresca" />
+      </div>
+    </div>
+  </main>
+
+  <!-- ======== VIDEOS ======== -->
+  <section class="video-container container mb-5">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="video-wrapper">
+          <video class="video-frame" autoplay loop muted playsinline>
+            <source src="video/leche1.mp4" type="video/mp4" />
+            Tu navegador no soporta el elemento video.
+          </video>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="video-wrapper">
+          <video class="video-frame" autoplay loop muted playsinline>
+            <source src="video/leche2.mp4" type="video/mp4" />
+            Tu navegador no soporta el elemento video.
+          </video>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="video-wrapper">
+          <video class="video-frame" autoplay loop muted playsinline>
+            <source src="video/mantequilla1.mp4" type="video/mp4" />
+            Tu navegador no soporta el elemento video.
+          </video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== SERVICIOS ======== -->
+  <section class="container mt-5">
+    <div class="row g-4 text-center">
+      <div class="col-md-4">
+        <div class="card servicios-card border-danger">
+          <div class="card-body">
+            <h5 class="card-title mt-3">Productos de Calidad</h5>
+            <p class="card-text">Garantizamos la autenticidad de nuestros productos</p>
+            <a href="productos.html" class="btn btn-primary">Leer más</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card servicios-card border-danger">
+          <div class="card-body">
+            <h5 class="card-title mt-3">Servicio de calidad</h5>
+            <p class="card-text">Personal capacitado a tu disposición.</p>
+            <a href="contacto.html" class="btn btn-primary">Leer más</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card servicios-card border-danger">
+          <div class="card-body">
+            <h5 class="card-title mt-3">Sabores lácteos para disfrutar en cada preparación</h5>
+            <p class="card-text">Diversas opciones para compartir.</p>
+            <a href="productos.html" class="btn btn-primary">Leer más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- ======== FOOTER ======== -->
+  <footer class="bg-dark text-white text-center py-4 mt-5">
+    <div class="container">
+      <h5 class="mb-3">¡Contáctanos para disfrutar nuestros productos!</h5>
+      <p class="mb-1">
+        <strong>Distribuidor:</strong> Wilfredo Irías <br>
+        <strong>Teléfono:</strong> <a href="tel:+50498791335" class="text-white text-decoration-none">9879-1335</a>
+      </p>
+      <p class="mb-1">
+        <strong>Página web:</strong> 
+        <a href="https://procesadoradiosesamor.netlify.app/" target="_blank" class="text-white text-decoration-none">
+          https://procesadoradiosesamor.netlify.app/
+        </a>
+      </p>
+      <hr class="bg-light">
+      <p class="mb-0">&copy; 2025 Procesadora de Lácteos Dios es Amor. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
